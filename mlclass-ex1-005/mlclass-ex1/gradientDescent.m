@@ -17,11 +17,9 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
-
-
-
-
-
+	fprintf(' x = [%.0f]\n', [theta(:)]');
+	J = alpha * sum((X * theta - y).* X)/ m;
+	theta = theta - J';
 
     % ============================================================
 
