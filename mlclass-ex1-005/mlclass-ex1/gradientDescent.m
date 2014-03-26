@@ -18,6 +18,11 @@ for iter = 1:num_iters
     %
 
 
+
+
+
+
+
     % ============================================================
 
     % Save the cost J in every iteration    
