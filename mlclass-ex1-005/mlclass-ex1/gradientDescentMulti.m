@@ -11,6 +11,7 @@ thetaLength = length(theta);
 newTheta = zeros(thetaLength, 1);
 for iter = 1:num_iters
 
+    fprintf(' theta = [%.0f %.0f %.0f]\n', [theta(:)]');
     % ====================== YOUR CODE HERE ======================
     % Instructions: Perform a single gradient step on the parameter vector
     %               theta. 
@@ -22,7 +23,6 @@ for iter = 1:num_iters
 		newTheta(index) = theta(index) - alpha * sum((X * theta - y).* X(:,index))/ m;
 	end
 
-	fprintf(' x = [%.0f]\n', [newTheta(:)]');
 	theta = newTheta;
     % ============================================================
 
@@ -33,5 +33,5 @@ end
 
 end
 
-% X = [1 2104 3;1 1600 3;1 2400 3;1 1416 2;1 3000 4;1 1985 4;1 1534 3;1 1427 3;1 1380 3;1 1494 3]
+% X = [2104 3;1600 3;2400 3;1416 2;3000 4;1985 4;1534 3;1427 3;1380 3;1494 3]
 % y = [399900;329900;369000;232000;539900;299900;314900;198999;212000;242500]
