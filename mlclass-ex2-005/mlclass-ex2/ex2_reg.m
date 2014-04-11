@@ -61,7 +61,7 @@ X = mapFeature(X(:,1), X(:,2));
 initial_theta = zeros(size(X, 2), 1);
 
 % Set regularization parameter lambda to 1
-lambda = 1;
+lambda = 0;
 
 % Compute and display initial cost and gradient for regularized logistic
 % regression
@@ -113,4 +113,6 @@ p = predict(theta, X);
 
 fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
 
+fprintf('\nProgram paused. Press enter to continue.\n');
+pause;
 
